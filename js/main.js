@@ -144,23 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
-        // Update all icons to sun (since it's dark)
-        themeToggleBtns.forEach(btn => {
-            const icon = btn.querySelector('i');
-            if (icon) {
-                icon.classList.remove('fa-moon', 'fas');
-                icon.classList.add('fa-sun', 'far');
-            }
-        });
-    } else {
-        // Ensure default is moon (light mode)
-        themeToggleBtns.forEach(btn => {
-            const icon = btn.querySelector('i');
-            if (icon) {
-                icon.classList.remove('fa-sun', 'far');
-                icon.classList.add('fa-moon', 'fas');
-            }
-        });
     }
 
     // 2. Add Event Listeners to ALL buttons
@@ -171,21 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Save preference
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
-
-            // Update icons on ALL buttons (keep them in sync)
-            themeToggleBtns.forEach(b => {
-                const icon = b.querySelector('i');
-                if (icon) {
-                    if (isDark) {
-                        icon.classList.remove('fa-moon', 'fas');
-                        icon.classList.add('fa-sun', 'far');
-                    } else {
-                        icon.classList.remove('fa-sun', 'far');
-                        icon.classList.add('fa-moon', 'fas');
-                    }
-                }
-            });
         });
     });
-
 });
