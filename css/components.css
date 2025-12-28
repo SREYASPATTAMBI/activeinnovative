@@ -110,8 +110,20 @@
 
 /* Mobile Nav */
 @media (max-width: 768px) {
+
+    /* Hide top bar on mobile to avoid fixed-header conflict */
     .top-bar {
-        display: none;
+        display: none !important;
+    }
+
+    /* Restore Hamburger Menu Visibility */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: var(--dark-color);
+        z-index: 1001;
+        /* Ensure it stays above everything */
     }
 
     .navbar {
@@ -160,6 +172,16 @@
         font-size: 1.2rem;
         color: var(--primary-color);
     }
+
+    /* Hero Adjustments (Mobile) */
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        height: 80vh;
+        /* Slightly smaller on mobile to reduce scrolling */
+    }
 }
 
 /* Hide mobile items on desktop */
@@ -169,16 +191,6 @@
     }
 }
 
-/* Hero Adjustments */
-.hero-content {
-    padding: 0 1rem;
-}
-
-.hero {
-    height: 80vh;
-    /* Slightly smaller on mobile to reduce scrolling */
-}
-}
 
 /* Hero Section - Updated for White Theme preference (Bright & Airy) */
 /* Hero Section - Slider */
