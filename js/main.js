@@ -135,41 +135,57 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Theme Toggle Logic ---
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+    // --- Theme Toggle Logic ---
+    // Handle multiple toggle buttons (Desktop & Mobile)
+    const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
     const body = document.body;
 
-    // Check for saved preference
-    if (localStorage.getItem('theme') === 'dark') {
+    // 1. Initialize State based on localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
-        if (themeIcon) {
-            themeIcon.classList.remove('fa-moon');
-            themeIcon.classList.remove('fas'); // Remove solid
-            themeIcon.classList.add('far');    // Add regular (outline)
-            themeIcon.classList.add('fa-sun');
-        }
-    }
-
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            const isDark = body.classList.contains('dark-mode');
-
-            // Switch Icon
-            if (isDark) {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.remove('fas'); // Remove solid
-                themeIcon.classList.add('far');    // Add regular (outline)
-                themeIcon.classList.add('fa-sun');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.remove('far'); // Remove regular
-                themeIcon.classList.add('fas');    // Add solid
-                themeIcon.classList.add('fa-moon');
-                localStorage.setItem('theme', 'light');
+        // Update all icons to sun (since it's dark)
+        themeToggleBtns.forEach(btn => {
+            const icon = btn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-moon', 'fas');
+                icon.classList.add('fa-sun', 'far');
+            }
+        });
+    } else {
+        // Ensure default is moon (light mode)
+        themeToggleBtns.forEach(btn => {
+            const icon = btn.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-sun', 'far');
+                icon.classList.add('fa-moon', 'fas');
             }
         });
     }
+
+    // 2. Add Event Listeners to ALL buttons
+    themeToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+
+            // Save preference
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+            // Update icons on ALL buttons (keep them in sync)
+            themeToggleBtns.forEach(b => {
+                const icon = b.querySelector('i');
+                if (icon) {
+                    if (isDark) {
+                        icon.classList.remove('fa-moon', 'fas');
+                        icon.classList.add('fa-sun', 'far');
+                    } else {
+                        icon.classList.remove('fa-sun', 'far');
+                        icon.classList.add('fa-moon', 'fas');
+                    }
+                }
+            });
+        });
+    });
 
 });

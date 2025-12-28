@@ -126,17 +126,39 @@
         /* Ensure it stays above everything */
     }
 
+    /* Sticky Navbar on Mobile - Simpler and Gap-Free */
     .navbar {
-        position: fixed;
+        position: sticky;
         top: 0;
-        padding: 0.5rem 5%;
-        /* Slightly tighter padding */
+        padding: 0.5rem 1rem;
+        /* Restore side padding so logo isn't cut off */
+        z-index: 1000;
+        justify-content: space-between;
+        /* Ensure logo left, icons right */
+    }
+
+    /* Force Logo Left Alignment */
+    .navbar .logo {
+        margin-right: auto;
+    }
+
+    /* Show Mobile Theme Toggle */
+    .theme-toggle-mobile {
+        display: flex !important;
+        font-size: 1.2rem;
+        color: var(--text-main);
+        background: none;
+        border: none;
+    }
+
+    /* Hide the theme toggle inside the dropdown menu on mobile */
+    .nav-links .theme-toggle-btn {
+        display: none;
     }
 
     .nav-links {
         position: absolute;
         top: 100%;
-        /* Automatically sits below the navbar regardless of height */
         right: 0;
         width: 100%;
         background-color: var(--white-color);
@@ -148,7 +170,6 @@
         transition: transform 0.3s ease;
         border-bottom: 2px solid var(--primary-color);
         z-index: 999;
-        /* Ensure below navbar */
     }
 
     /* Mobile Menu Active State - This was missing! */
@@ -187,18 +208,32 @@
 
     .hero {
         height: 80vh;
-        /* Slightly smaller on mobile to reduce scrolling */
-        margin-top: 0;
-        /* Ensure no gap above */
-        padding-top: 110px;
-        /* Increased to clear the taller logo/navbar */
+        width: 100vw !important;
+        /* Force full viewport width */
+        margin-left: calc(-50vw + 50%) !important;
+        /* Centering trick if parent has padding */
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    body,
+    html {
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden;
+        /* Prevent horizontal scroll */
     }
 }
 
 /* Hide mobile items on desktop */
 @media (min-width: 769px) {
-    .mobile-only-item {
-        display: none;
+
+    .mobile-only-item,
+    .theme-toggle-mobile {
+        display: none !important;
     }
 }
 
