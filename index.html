@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Innovative Systems | Blue Star Channel Partner</title>
+    <meta name="description"
+        content="Your trusted partner for Blue Star Air Conditioning, Refrigeration, and Cooling Solutions. Reputed service and genuine spares.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+    <!-- Top Bar (Hero Bar style) -->
+
+
+    <!-- Main Navbar -->
+    <nav class="navbar">
+        <div class="container d-flex justify-between align-center" style="width: 100%;">
+            <div class="logo">
+                <i class="fas fa-snowflake fa-lg"></i>
+                <div style="display: flex; flex-direction: column; line-height: 1.2; margin-left: 10px;">
+                    <span style="font-size: 1.2rem; font-weight: 800; letter-spacing: -0.5px;">ACTIVE INNOVATIVE
+                        SYSTEMS</span>
+                    <span
+                        style="font-size: 0.7rem; font-weight: 600; color: var(--text-light); text-transform: uppercase;">Blue
+                        Star Official Channel Partner</span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero with Advanced Slider -->
+    <section class="hero">
+        <div class="hero-slider">
+            <!-- Slide 1: General/Corporate -->
+            <div class="slide active">
+                <div class="slide-bg"
+                    style="background-image: linear-gradient(rgba(0, 86, 179, 0.6), rgba(0, 168, 232, 0.4)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');">
+                </div>
+                <div class="hero-content">
+                    <h1>ACTIVE INNOVATIVE SYSTEMS</h1>
+                    <h2>Authorized Sales & Service Dealer</h2>
+                    <p>Your trusted Blue Star Channel Partner. Delivering comfort, efficiency, and innovation since
+                        2011.</p>
+                    <div class="hero-btn-container">
+                        <a href="#about" class="btn btn-primary">Discover More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Central AC -->
+            <div class="slide">
+                <div class="slide-bg"
+                    style="background-image: linear-gradient(rgba(0, 86, 179, 0.6), rgba(0, 168, 232, 0.4)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1920&q=80');">
+                </div>
+                <div class="hero-content">
+                    <h1>MASTERING CLIMATE CONTROL</h1>
+                    <h2>Central Air Conditioning Experts</h2>
+                    <p>From malls to hospitals, we design and install efficient central cooling systems that stand the
+                        test of time.</p>
+                    <div class="hero-btn-container">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Cold Storage -->
+            <div class="slide">
+                <div class="slide-bg"
+                    style="background-image: linear-gradient(rgba(0, 86, 179, 0.6), rgba(0, 168, 232, 0.4)), url('https://images.unsplash.com/photo-1587370560942-ad2a04eabb6d?auto=format&fit=crop&w=1920&q=80');">
+                </div>
+                <div class="hero-content">
+                    <h1>PRECISION COLD STORAGE</h1>
+                    <h2>Modular & Industrial Solutions</h2>
+                    <p>Preserving quality with state-of-the-art cold rooms and commercial refrigeration tailored to your
+                        business.</p>
+                    <div class="hero-btn-container">
+                        <a href="#services" class="btn btn-primary">Our Solutions</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Service/Support -->
+            <div class="slide">
+                <div class="slide-bg"
+                    style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 86, 179, 0.6)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1920&q=80');">
+                </div>
+                <div class="hero-content">
+                    <h1>UNMATCHED SERVICE SUPPORT</h1>
+                    <h2>Trained Personnel & Genuine Spares</h2>
+                    <p>Ensuring your systems run at peak performance with our dedicated maintenance and priority support
+                        teams.</p>
+                    <div class="hero-btn-container">
+                        <a href="#contact" class="btn btn-primary">Get Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Dots -->
+        <div class="slider-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+            <span class="dot" onclick="goToSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="section reveal">
+        <div class="container">
+            <div class="grid grid-2">
+                <div class="reveal">
+                    <h2>Who We Are</h2>
+                    <p>ACTIVE INNOVATIVE SYSTEM is a channel partner of BLUESTAR since 2011; we could deliver the real
+                        BLUE STAR experience to our reputed clients with great contentment.</p>
+                    <br>
+                    <p>Our strength is in achieving recognition for our ability to understand the client’s requirements
+                        along with architects & consultants and develop an ability to comprehend architectural and
+                        interior concepts. specialized in providing air conditioning design & solutions that blend
+                        aesthetically with interiors and exteriors, without sacrificing any functional attributes.</p>
+                    <br>
+                    <p>We have also established leadership in the fields of commercial refrigeration such as Movie
+                        Theaters, Auditorium complexes, Restaurants, textiles, jewelers, and many more. We undertake
+                        sales, installation, repairs and servicing.</p>
+                </div>
+                <!-- Director Cards -->
+                <div>
+                    <h3 style="margin-bottom: 1.5rem;">Board Of Directors</h3>
+                    <div class="grid grid-2" style="gap: 1rem;">
+                        <div class="director-card">
+                            <p>Managing Director</p>
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Joby V D"
+                                class="director-img">
+                            <h4>JOBY V D</h4>
+                        </div>
+                        <div class="director-card">
+                            <p>Director</p>
+                            <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Linson Thomas"
+                                class="director-img">
+                            <h4>LINSON THOMAS</h4>
+                        </div>
+                        <div class="director-card" style="grid-column: 1 / -1; justify-self: center;">
+                            <p>Director</p>
+                            <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="Noby V D"
+                                class="director-img">
+                            <h4>NOBY V D</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Slider Section -->
+    <section class="section" style="background: #fff; padding: 2rem 0;">
+        <div class="container text-center mb-3">
+            <h2 class="text-primary">Trusted By</h2>
+            <p class="text-light">Proudly serving top companies across industries.</p>
+        </div>
+        <div class="slider-container">
+            <div class="slide-track">
+                <!-- 10 Unique Clients -->
+                <!-- Slide 1 -->
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-building"></i> <span>BuildCorp</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-bolt"></i> <span>PowerGrid</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-industry"></i> <span>IronWorks</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-leaf"></i> <span>EcoSys</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-hospital"></i> <span>MediCare</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-hotel"></i> <span>RoyalStay</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-university"></i> <span>EduCampus</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-shopping-cart"></i> <span>MallMart</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-utensils"></i> <span>FoodChain</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-dumbbell"></i> <span>FitZone</span></div>
+                </div>
+
+                <!-- Duplicate 10 for Seamless Loop -->
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-building"></i> <span>BuildCorp</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-bolt"></i> <span>PowerGrid</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-industry"></i> <span>IronWorks</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-leaf"></i> <span>EcoSys</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-hospital"></i> <span>MediCare</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-hotel"></i> <span>RoyalStay</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-university"></i> <span>EduCampus</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-shopping-cart"></i> <span>MallMart</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-utensils"></i> <span>FoodChain</span></div>
+                </div>
+                <div class="client-slide">
+                    <div class="client-logo"><i class="fas fa-dumbbell"></i> <span>FitZone</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section bg-light reveal">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2>Our Services</h2>
+                <p>Comprehensive cooling and refrigeration solutions tailored to your needs.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card reveal">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80"
+                        alt="Service" class="card-img">
+                    <div class="card-content">
+                        <i class="fas fa-tools card-icon"></i>
+                        <h3>Priority Service</h3>
+                        <p>All customers who opt for our annual service solutions are offered priority service, so that
+                            your calls get attended quicker.</p>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80"
+                        alt="Engineers" class="card-img">
+                    <div class="card-content">
+                        <i class="fas fa-user-cog card-icon"></i>
+                        <h3>Trained Personnel</h3>
+                        <p>Our engineers and technicians are intensively trained to handle the costly, sophisticated
+                            airconditioning equipment.</p>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80"
+                        alt="Central AC" class="card-img">
+                    <div class="card-content">
+                        <i class="fas fa-fan card-icon"></i>
+                        <h3>Central Air Conditioning</h3>
+                        <p>Every third commercial building in India has a Blue Star product installed inside. This is
+                            the immense scale and reach.</p>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80"
+                        alt="Refrigeration" class="card-img">
+                    <div class="card-content">
+                        <i class="fas fa-snowflake card-icon"></i>
+                        <h3>Commercial Refrigeration</h3>
+                        <p>Leading solutions for cold storages, movie theaters, and industrial cooling across various
+                            industries.</p>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80"
+                        alt="Room AC" class="card-img">
+                    <div class="card-content">
+                        <i class="fas fa-home card-icon"></i>
+                        <h3>Room Air Conditioning</h3>
+                        <p>Next-Gen Inverter Split ACs with ‘Precision Cooling Technology’ and micro-processor control.
+                        </p>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="https://images.unsplash.com/photo-1521790797524-b2497295b8a0?auto=format&fit=crop&w=800&q=80"
+                        alt="Water" class="card-img">
+                    <div class="card-content">
+                        <i class="fas fa-tint card-icon"></i>
+                        <h3>Water Purifiers</h3>
+                        <p>Innovative technology infusing water with alkaline and antioxidant properties to strengthen
+                            your immunity.</p>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80"
+                        alt="Cold Storage" class="card-img">
+                    <div class="card-content">
+                        <i class="fas fa-cubes card-icon"></i>
+                        <h3>Cold Storages</h3>
+                        <p>Modular Cold Rooms are standard preservation chambers built at site to desired dimensions and
+                            cooling specifications.</p>
+                    </div>
+                </div>
+                <div class="card reveal" data-category="completed">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80"
+                        alt="Spares" class="card-img">
+                    <div class="card-content">
+                        <i class="fas fa-cogs card-icon"></i>
+                        <h3>Genuine Spares</h3>
+                        <p>By opting for our service solution, you are assured of genuine spares that will go a long way
+                            in ensuring high uptime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section reveal">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2>Our Projects</h2>
+                <p>We have successfully executed numerous projects across various sectors.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="ongoing">Ongoing</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="project-grid grid grid-3">
+
+                <!-- Ongoing Projects (First 5 from original list) -->
+                <div class="card reveal" data-category="ongoing">
+                    <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=800&q=80"
+                        alt="Retail" class="card-img">
+                    <div class="card-content">
+                        <strong>First Cry</strong><br>
+                        <span class="text-light">Thrissur</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-category="ongoing">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80"
+                        alt="Hospital" class="card-img">
+                    <div class="card-content">
+                        <strong>Jubili Hospital OT</strong><br>
+                        <span class="text-light">Thrissur</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-category="ongoing">
+                    <img src="https://images.unsplash.com/photo-1519241047957-be31d7379a5d?auto=format&fit=crop&w=800&q=80"
+                        alt="Kids Wear" class="card-img">
+                    <div class="card-content">
+                        <strong>Minixin Kids Wear</strong><br>
+                        <span class="text-light">Calicut</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-category="ongoing">
+                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=80"
+                        alt="Auditorium" class="card-img">
+                    <div class="card-content">
+                        <strong>Shreekailasam Auditorium</strong><br>
+                        <span class="text-light">Guruvayur</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-category="ongoing">
+                    <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=80"
+                        alt="Cold Storage" class="card-img">
+                    <div class="card-content">
+                        <strong>Baby Memorial Hospital</strong><br>
+                        <span class="text-light">Calicut (Cold Storage)</span>
+                    </div>
+                </div>
+
+                <!-- Completed Projects (Remaining) -->
+                <div class="card reveal" data-category="completed">
+                    <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=800&q=80"
+                        alt="Convention" class="card-img">
+                    <div class="card-content">
+                        <strong>The Vaz Arena</strong><br>
+                        <span class="text-light">Convention Centre</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-category="completed">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
+                        alt="Palace" class="card-img">
+                    <div class="card-content">
+                        <strong>Yem Tee’s Palace</strong><br>
+                        <span class="text-light">Pattambi</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-category="completed">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80"
+                        alt="Office" class="card-img">
+                    <div class="card-content">
+                        <strong>Vyapara Bhavan</strong><br>
+                        <span class="text-light">Calicut</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-category="completed">
+                    <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80"
+                        alt="Center" class="card-img">
+                    <div class="card-content">
+                        <strong>Rainbow Convention</strong><br>
+                        <span class="text-light">Centre</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-category="completed">
+                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=80"
+                        alt="Auditorium" class="card-img">
+                    <div class="card-content">
+                        <strong>Promise Auditorium</strong><br>
+                        <span class="text-light">Manjery</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-category="completed">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80"
+                        alt="Jewelry" class="card-img">
+                    <div class="card-content">
+                        <strong>Jantha Jewellery</strong><br>
+                        <span class="text-light">Wadakkanchery</span>
+                    </div>
+                </div>
+
+                <div class="card reveal" data-category="completed">
+                    <img src="https://images.unsplash.com/photo-1560439514-e960a3ef5019?auto=format&fit=crop&w=800&q=80"
+                        alt="Hebron Auditorium" class="card-img">
+                    <div class="card-content">
+                        <strong>Hebron Auditorium</strong><br>
+                        <span class="text-light">Wadakkanchery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Detailed Contact Section -->
+    <section id="contact" class="section reveal">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2 class="text-primary">Get In Touch</h2>
+                <p>We are here to answer any questions you may have about our cooling solutions.</p>
+            </div>
+
+            <div class="grid grid-2" style="align-items: flex-start; gap: 3rem;">
+                <!-- Contact Details -->
+                <div class="contact-details reveal slide-right"
+                    style="padding: 2rem; background: #fff; box-shadow: var(--shadow-md); border-radius: 12px;">
+                    <h3
+                        style="margin-bottom: 2rem; border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 0.5rem;">
+                        Contact Information</h3>
+
+                    <div class="contact-item" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                        <div class="icon-box"
+                            style="width: 50px; height: 50px; background: #eff6ff; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--primary-color); font-size: 1.2rem;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Head Office</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">
+                                Active Innovative Systems<br>
+                                Near Railway Station,<br>
+                                Thrissur, Kerala - 680001
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                        <div class="icon-box"
+                            style="width: 50px; height: 50px; background: #eff6ff; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--primary-color); font-size: 1.2rem;">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Phone Numbers</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">
+                                <span style="font-weight: 600;">Sales:</span> +91 95440 54400<br>
+                                <span style="font-weight: 600;">Service:</span> +91 487 242 4400
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" style="display: flex; gap: 1rem;">
+                        <div class="icon-box"
+                            style="width: 50px; height: 50px; background: #eff6ff; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--primary-color); font-size: 1.2rem;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Email Support</h4>
+                            <p style="color: var(--text-light); font-size: 0.95rem;">
+                                activeinnovative@gmail.com<br>
+                                support@activeinnovative.com
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item"
+                        style="display: flex; gap: 1rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #eee;">
+                        <div class="icon-box"
+                            style="width: 50px; height: 50px; background: #eff6ff; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--primary-color); font-size: 1.2rem;">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem; font-size: 1.1rem;">Follow Us</h4>
+                            <div class="social-icons-contact" style="display: flex; gap: 1.5rem; margin-top: 5px;">
+                                <a href="#"
+                                    style="color: var(--primary-color); font-size: 1.2rem; transition: transform 0.3s;"
+                                    onmouseover="this.style.transform='scale(1.2)'"
+                                    onmouseout="this.style.transform='scale(1)'"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"
+                                    style="color: var(--primary-color); font-size: 1.2rem; transition: transform 0.3s;"
+                                    onmouseover="this.style.transform='scale(1.2)'"
+                                    onmouseout="this.style.transform='scale(1)'"><i class="fab fa-instagram"></i></a>
+                                <a href="#"
+                                    style="color: var(--primary-color); font-size: 1.2rem; transition: transform 0.3s;"
+                                    onmouseover="this.style.transform='scale(1.2)'"
+                                    onmouseout="this.style.transform='scale(1)'"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map -->
+                <div class="map-container reveal slide-left"
+                    style="height: 100%; min-height: 400px; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15691.801642194639!2d76.2144349!3d10.5276416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7ef02d294025f%3A0xc4f447702f307779!2sThrissur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1689582453896!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <h4>Active Innovative</h4>
+                    <p>Channel Partner of Blue Star since 2011.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +91 12345 67890</li>
+                        <li><i class="fas fa-envelope"></i> info@activeinnovative.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem; opacity: 0.5;">
+                <p>&copy; 2025 Active Innovative Systems. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
