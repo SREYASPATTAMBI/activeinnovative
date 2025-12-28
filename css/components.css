@@ -142,15 +142,42 @@
         /* Instead of 350px fixed */
     }
 
-    /* Hero Adjustments */
-    .hero-content {
-        padding: 0 1rem;
+    /* Mobile Menu Contact Items */
+    .mobile-only-item {
+        display: block;
+        margin-top: 1rem;
+        text-align: center;
     }
 
-    .hero {
-        height: 80vh;
-        /* Slightly smaller on mobile to reduce scrolling */
+    .social-links-mobile {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-top: 0.5rem;
     }
+
+    .social-links-mobile a {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+    }
+}
+
+/* Hide mobile items on desktop */
+@media (min-width: 769px) {
+    .mobile-only-item {
+        display: none;
+    }
+}
+
+/* Hero Adjustments */
+.hero-content {
+    padding: 0 1rem;
+}
+
+.hero {
+    height: 80vh;
+    /* Slightly smaller on mobile to reduce scrolling */
+}
 }
 
 /* Hero Section - Updated for White Theme preference (Bright & Airy) */
