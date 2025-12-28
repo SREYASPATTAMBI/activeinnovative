@@ -148,10 +148,14 @@
         border-bottom: 2px solid var(--primary-color);
     }
 
+    /* Mobile Menu Active State - This was missing! */
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
     /* Ensure director cards fit small screens */
     .director-card {
         max-width: 100%;
-        /* Instead of 350px fixed */
     }
 
     /* Mobile Menu Contact Items */
@@ -181,6 +185,10 @@
     .hero {
         height: 80vh;
         /* Slightly smaller on mobile to reduce scrolling */
+        margin-top: 0;
+        /* Ensure no gap above */
+        padding-top: 60px;
+        /* Push content down so it's not hidden behind fixed navbar */
     }
 }
 
