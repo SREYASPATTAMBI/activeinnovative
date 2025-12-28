@@ -129,13 +129,14 @@
     .navbar {
         position: fixed;
         top: 0;
-        padding: 0.8rem 5%;
+        padding: 0.5rem 5%;
+        /* Slightly tighter padding */
     }
 
     .nav-links {
         position: absolute;
-        top: 60px;
-        /* Aligns with smaller navbar height */
+        top: 100%;
+        /* Automatically sits below the navbar regardless of height */
         right: 0;
         width: 100%;
         background-color: var(--white-color);
@@ -146,6 +147,8 @@
         transform: translateY(-150%);
         transition: transform 0.3s ease;
         border-bottom: 2px solid var(--primary-color);
+        z-index: 999;
+        /* Ensure below navbar */
     }
 
     /* Mobile Menu Active State - This was missing! */
@@ -187,8 +190,8 @@
         /* Slightly smaller on mobile to reduce scrolling */
         margin-top: 0;
         /* Ensure no gap above */
-        padding-top: 60px;
-        /* Push content down so it's not hidden behind fixed navbar */
+        padding-top: 110px;
+        /* Increased to clear the taller logo/navbar */
     }
 }
 
