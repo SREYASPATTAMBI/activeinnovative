@@ -1,0 +1,523 @@
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    /* Pill shape for modern feel */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0, 86, 179, 0.2);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 86, 179, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--white-color);
+    color: var(--white-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+
+/* Navbar - Clean White */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    background-color: var(--white-color);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.navbar .logo {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.btn-sm {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--dark-color);
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+    .top-bar {
+        display: none;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        padding: 0.8rem 5%;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        /* Aligns with smaller navbar height */
+        right: 0;
+        width: 100%;
+        background-color: var(--white-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        border-bottom: 2px solid var(--primary-color);
+    }
+
+    /* Ensure director cards fit small screens */
+    .director-card {
+        max-width: 100%;
+        /* Instead of 350px fixed */
+    }
+
+    /* Hero Adjustments */
+    .hero-content {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        height: 80vh;
+        /* Slightly smaller on mobile to reduce scrolling */
+    }
+}
+
+/* Hero Section - Updated for White Theme preference (Bright & Airy) */
+/* Hero Section - Slider */
+.hero {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    display: block;
+    /* Changed from flex to block to let slider fill */
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Slide Background Image with Zoom - Darker Overlay for Readability */
+.slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 5s ease-out;
+    /* Speed up zoom slightly */
+    z-index: -1;
+}
+
+.slide.active .slide-bg {
+    transform: scale(1.1);
+}
+
+/* Content Animation inside Slides - Faster Entrance */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 1rem;
+    color: var(--white-color);
+    /* Added for readability */
+}
+
+.hero-content h1 {
+    /* Ensuring High Readability */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: var(--white-color);
+    /* Explicitly white */
+}
+
+/* Force all text inside hero to be white */
+.hero-content h2,
+.hero-content h3,
+.hero-content p,
+.hero-content span {
+    color: var(--white-color);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Add shadow for better contrast */
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content p,
+.hero-btn-container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+    /* Faster transition */
+}
+
+/* Staggered Delays when Active - Quicker Sequence */
+.slide.active .hero-content h1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.slide.active .hero-content h2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+.slide.active .hero-content p {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
+.slide.active .hero-btn-container {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 2px solid var(--white-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dot.active {
+    background-color: var(--white-color);
+    /* Fill when active */
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Project Filter Buttons */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    background: transparent;
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    color: var(--primary-color);
+}
+
+.filter-btn.active::after {
+    width: 100%;
+}
+
+.card.hide {
+    display: none;
+}
+
+/* Cards - Floating White Cards */
+/* Card Animation */
+.card {
+    background: var(--white-color);
+    padding: 0;
+    /* Removing padding to let image sit flush */
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: fadeIn 0.5s ease-in-out;
+    border: 1px solid var(--light-color);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-content {
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Subtle gradient border effect on hover */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Footer - Light Grey instead of Black */
+.footer {
+    background-color: #f1f5f9;
+    /* Light grey */
+    color: var(--text-light);
+    padding: 5rem 0 2rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer h4 {
+    color: var(--dark-color);
+    margin-bottom: 1.5rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--text-light);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+    /* Slide effect */
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    color: var(--primary-color);
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+/* Director Card Styles - Ensured consistency */
+.director-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--white-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Size uniformity */
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.director-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.director-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    /* Modern circular profile */
+    border: 3px solid var(--light-color);
+}
+
+.director-card h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+}
+
+.director-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    /* Added spacing below title */
+}
+
+.social-icons a:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
